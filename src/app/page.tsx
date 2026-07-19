@@ -60,7 +60,7 @@ export default function Home() {
                   />
 
                   {/* Black fade overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
 
                   {/* Content */}
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">

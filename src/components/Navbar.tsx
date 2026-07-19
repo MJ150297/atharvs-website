@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -15,9 +15,12 @@ export default function Navbar() {
       setScrolled(scrollY > 80);
 
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(docHeight > 0 ? Math.min(scrollY / docHeight, 1) * 100 : 0);
+      const progress = docHeight > 0 ? Math.min(scrollY / docHeight, 1) * 100 : 0;
+
+      if (progressRef.current) {
+        progressRef.current.style.width = `${progress}%`;
+      }
     };
-    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -26,8 +29,9 @@ export default function Navbar() {
     <>
       {/* Scroll Progress Bar */}
       <div
-        className="fixed top-0 left-0 z-[60] h-0.5 bg-gradient-to-r from-brand-blue to-brand-green transition-all duration-150"
-        style={{ width: `${scrollProgress}%` }}
+        ref={progressRef}
+        className="fixed top-0 left-0 z-[60] h-0.5 bg-gradient-to-r from-brand-blue to-brand-green"
+        style={{ width: "0%" }}
       />
 
       <nav
