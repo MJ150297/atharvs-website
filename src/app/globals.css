@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1560BD;
+  --color-brand-blue-light: #38B6FF;
+  --color-brand-blue-dark: #0F4588;
+
+  --color-brand-green: #2ECC71;
+  --color-brand-green-light: #7DDA58;
+  --color-brand-green-dark: #1E8449;
+
+  --color-brand-neutral-bg: #F8FAFC;
+  --color-brand-neutral-card: #FFFFFF;
+  --color-brand-neutral-text: #1E293B;
+  --color-brand-neutral-muted: #64748B;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-neutral-bg);
+    color: var(--color-brand-neutral-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@utility bg-logo-gradient {
+  background: linear-gradient(135deg, #1560BD 0%, #38B6FF 50%, #2ECC71 100%);
+}
+
+@utility bg-blue-gradient {
+  background: linear-gradient(135deg, #0F4588 0%, #1560BD 100%);
+}
+
+@utility bg-green-gradient {
+  background: linear-gradient(135deg, #1E8449 0%, #2ECC71 100%);
+}
+
+@utility glow-brand-blue {
+  box-shadow: 0 0 20px rgba(21, 96, 189, 0.15);
+}
+
+/* ── Animations ── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1deg); }
+  66% { transform: translateY(6px) rotate(-0.5deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(46, 204, 113, 0.4); }
+  50% { box-shadow: 0 0 24px rgba(46, 204, 113, 0.7); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@utility animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+@utility animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Hero Slider ── */
+
+@utility hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(15, 69, 136, 0.85) 0%,
+    rgba(15, 69, 136, 0.4) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* Swiper pagination dots — white with brand tint */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2ECC71 !important;
+  width: 28px !important;
+  border-radius: 5px !important;
+}
+
+/* Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
