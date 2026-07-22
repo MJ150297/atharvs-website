@@ -85,7 +85,7 @@ export default function Home() {
       {/* Owner Section */}
       <section className="w-full py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-x-20">
             {/* Content — Top on mobile, Left on desktop */}
             <AppearOnScroll>
               <div className="text-start flex-1 space-y-5">
