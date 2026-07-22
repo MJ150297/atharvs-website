@@ -30,7 +30,7 @@ export default function Navbar() {
       {/* Scroll Progress Bar */}
       <div
         ref={progressRef}
-        className="fixed top-0 left-0 z-[60] h-0.5 bg-gradient-to-r from-brand-blue to-brand-green"
+        className="fixed top-0 left-0 z-60 h-0.5 bg-linear-to-r from-brand-blue to-brand-green"
         style={{ width: "0%" }}
       />
 
