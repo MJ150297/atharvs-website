@@ -86,25 +86,7 @@ export default function Home() {
       <section className="w-full py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-            {/* Image — Top on mobile, Right on desktop */}
-            <AppearOnScroll delay={200}>
-              <div className="w-72 h-72 md:w-80 md:h-80 shrink-0 relative">
-                {/* Decorative background ring */}
-                <div className="absolute -inset-4 rounded-full border-2 border-dashed border-brand-blue/20 animate-float-slow" />
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                  <Image
-                    src="/owner.webp"
-                    alt="Mr. Arvind Singh — Owner, Atharv's Trading Company"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 288px, 320px"
-                    priority
-                  />
-                </div>
-              </div>
-            </AppearOnScroll>
-
-            {/* Content — Bottom on mobile, Left on desktop */}
+            {/* Content — Top on mobile, Left on desktop */}
             <AppearOnScroll>
               <div className="text-start flex-1 space-y-5">
                 <span className="inline-block text-sm font-semibold uppercase tracking-widest text-brand-green">
@@ -148,6 +130,24 @@ export default function Home() {
                   </svg>
                   Call: +91 92588 50323
                 </a>
+              </div>
+            </AppearOnScroll>
+
+            {/* Image — Bottom on mobile, Right on desktop */}
+            <AppearOnScroll delay={200}>
+              <div className="w-72 h-72 md:w-80 md:h-80 shrink-0 relative">
+                {/* Decorative background ring */}
+                <div className="absolute -inset-4 rounded-full border-2 border-dashed border-brand-blue/20 animate-float-slow" />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                  <Image
+                    src="/owner.webp"
+                    alt="Mr. Arvind Singh — Owner, Atharv's Trading Company"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 288px, 320px"
+                    priority
+                  />
+                </div>
               </div>
             </AppearOnScroll>
           </div>
