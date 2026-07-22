@@ -13,7 +13,7 @@ const districts = [
   "Pauri",
 ];
 
-const WHATSAPP_NUMBER = "917303479951";
+const WHATSAPP_NUMBER = "919258850323";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -173,10 +173,17 @@ export default function ContactPage() {
                       Phone:
                     </span>{" "}
                     <a
-                      href="tel:+917303479951"
+                      href="tel:+919258850323"
                       className="hover:text-brand-blue transition-colors"
                     >
-                      +91-73034-79951
+                      +91-92588-50323
+                    </a>
+                    <span className="mx-2 text-slate-300">|</span>
+                    <a
+                      href="tel:+91730279951"
+                      className="hover:text-brand-blue transition-colors"
+                    >
+                      +91-73027-99951
                     </a>
                   </p>
                   <p>
@@ -184,10 +191,10 @@ export default function ContactPage() {
                       Email:
                     </span>{" "}
                     <a
-                      href="mailto:info@atharvstradingcompany.in"
+                      href="mailto:atharvstradingcompany@gmail.com"
                       className="hover:text-brand-blue transition-colors"
                     >
-                      info@atharvstradingcompany.in
+                      atharvstradingcompany@gmail.com
                     </a>
                   </p>
                   <p>
@@ -420,7 +427,7 @@ export default function ContactPage() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/917303479951"
+                href="https://wa.me/919258850323"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/40 px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"

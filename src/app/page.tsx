@@ -85,21 +85,39 @@ export default function Home() {
       {/* Owner Section */}
       <section className="w-full py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            {/* Content — Top */}
+          <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+            {/* Image — Top on mobile, Right on desktop */}
+            <AppearOnScroll delay={200}>
+              <div className="w-72 h-72 md:w-80 md:h-80 shrink-0 relative">
+                {/* Decorative background ring */}
+                <div className="absolute -inset-4 rounded-full border-2 border-dashed border-brand-blue/20 animate-float-slow" />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                  <Image
+                    src="/owner.webp"
+                    alt="Mr. Arvind Singh — Owner, Atharv's Trading Company"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 288px, 320px"
+                    priority
+                  />
+                </div>
+              </div>
+            </AppearOnScroll>
+
+            {/* Content — Bottom on mobile, Left on desktop */}
             <AppearOnScroll>
-              <div className="text-start max-w-2xl mx-auto space-y-5">
+              <div className="text-start flex-1 space-y-5">
                 <span className="inline-block text-sm font-semibold uppercase tracking-widest text-brand-green">
                   Meet the Owner
                 </span>
                 <h2 className="text-3xl font-bold text-brand-blue-dark md:text-4xl">
-                  Mr. Arvind
+                  Mr. Arvind Singh
                 </h2>
                 <p className="text-lg font-medium text-brand-blue">
                   Owner, Atharv's Trading Company
                 </p>
                 <p className="text-brand-neutral-muted leading-relaxed">
-                  With years of experience in the home appliance industry, Mr. Arvind is committed
+                  With years of experience in the home appliance industry, Mr. Arvind Singh is committed
                   to providing top-quality products and exceptional service to every customer across
                   the Garhwal region. His hands-on approach ensures that Atharv's Trading Company
                   remains a trusted name for reliable appliances and personalized support.
@@ -112,7 +130,7 @@ export default function Home() {
                   and durability.
                 </p>
                 <a
-                  href="tel:+917303479951"
+                  href="tel:+919258850323"
                   className="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-white px-6 py-3 rounded-full text-sm font-bold transition-all shadow-md hover:shadow-lg"
                 >
                   <svg
@@ -128,26 +146,8 @@ export default function Home() {
                       d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                     />
                   </svg>
-                  Call: +91 73034 79951
+                  Call: +91 92588 50323
                 </a>
-              </div>
-            </AppearOnScroll>
-
-            {/* Image — Bottom (centered) */}
-            <AppearOnScroll delay={200}>
-              <div className="w-72 h-72 md:w-96 md:h-96 relative">
-                {/* Decorative background ring */}
-                <div className="absolute -inset-4 rounded-full border-2 border-dashed border-brand-blue/20 animate-float-slow" />
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                  <Image
-                    src="/owner.webp"
-                    alt="Mr. Arvind — Owner, Atharv's Trading Company"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 288px, 384px"
-                    priority
-                  />
-                </div>
               </div>
             </AppearOnScroll>
           </div>
@@ -172,7 +172,7 @@ export default function Home() {
               in Uttarakhand.
             </p>
             <a
-              href="https://wa.me/917303479951"
+              href="https://wa.me/919258850323"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-brand-blue px-8 py-4 rounded-lg font-medium text-lg hover:bg-blue-50 transition-all hover:-translate-y-0.5 hover:shadow-xl"

@@ -16,7 +16,7 @@ export default function FloatingWhatsApp() {
     <>
       {/* Floating WhatsApp Button — desktop */}
       <a
-        href="https://wa.me/917303479951"
+        href="https://wa.me/919258850323"
         target="_blank"
         rel="noopener noreferrer"
         className={`fixed bottom-6 right-6 z-40 hidden md:flex items-center justify-center w-14 h-14 bg-brand-green text-white rounded-full shadow-lg animate-pulse-glow transition-all duration-300 hover:scale-110 hover:shadow-xl ${
@@ -32,13 +32,13 @@ export default function FloatingWhatsApp() {
       {/* Sticky Bottom Bar — mobile only */}
       <div className="fixed bottom-0 left-0 right-0 z-40 flex md:hidden bg-white border-t border-slate-200 shadow-2xl">
         <a
-          href="tel:+917303479951"
+          href="tel:+919258850323"
           className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-bold text-brand-blue-dark"
         >
           📞 Call Now
         </a>
         <a
-          href="https://wa.me/917303479951"
+          href="https://wa.me/919258850323"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-bold bg-brand-green text-white"
